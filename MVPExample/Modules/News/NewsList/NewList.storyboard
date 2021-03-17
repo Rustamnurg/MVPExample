@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nkN-2W-CVp">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Список-->
+        <scene sceneID="bkJ-ox-YUN">
+            <objects>
+                <viewController title="Список" id="PYy-59-hcR" customClass="NewListViewController" customModule="MVPExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5mR-h3-G5q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bo1-x4-VGR" customClass="PrimaryButton" customModule="MVPExample" customModuleProvider="target">
+                                <rect key="frame" x="107" y="430.5" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="DaT-tl-JPI"/>
+                                    <constraint firstAttribute="height" constant="40" id="pFk-UI-3g9"/>
+                                </constraints>
+                                <state key="normal" title="Show profile"/>
+                                <connections>
+                                    <action selector="showProfileButtonTapped:" destination="PYy-59-hcR" eventType="touchUpInside" id="ex0-tU-ytP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="suQ-nw-GwT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Bo1-x4-VGR" firstAttribute="centerY" secondItem="suQ-nw-GwT" secondAttribute="centerY" id="7SG-Uo-Uup"/>
+                            <constraint firstItem="Bo1-x4-VGR" firstAttribute="centerX" secondItem="suQ-nw-GwT" secondAttribute="centerX" id="WVO-nz-No3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="List" id="nkW-1f-OfW"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="5ZX-Ev-rLe" kind="show" identifier="Profile" id="36H-GG-0Lp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y09-b3-k6Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="634.78260869565224" y="-1151.1160714285713"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="LTZ-bX-zYQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="5ZX-Ev-rLe" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="RQv-QE-jub"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g4x-zm-a4K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1364" y="-1069"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GLB-Fc-CT1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nkN-2W-CVp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="list.dash" catalog="system" selectedImage="list.dash" id="f8U-Po-CRO"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XTe-GV-zD8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PYy-59-hcR" kind="relationship" relationship="rootViewController" id="LRS-H2-h9X"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zks-7t-1Sd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-275.36231884057975" y="-1151.1160714285713"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
